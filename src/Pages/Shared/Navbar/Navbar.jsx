@@ -19,7 +19,7 @@ const Navbar = () => {
                         <Link to='/blog'>Blog</Link>
                     </ul>
                 </div>
-                <Link to='/' className="normal-case text-3xl font-extrabold text-blue-600 pl-6 mt-4">Brain
+                <Link to='/' className="normal-case text-center text-3xl font-extrabold text-blue-600 pl-6 mt-4">Brain
                     <br />
                     Booster
                     <br />
@@ -35,7 +35,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-active btn-info">Log in</button>
+                <Link to='/login'><button className="btn btn-active btn-info">Log in</button></Link>
             </div>
         </div>
     );

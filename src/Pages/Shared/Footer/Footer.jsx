@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
-                <p className='normal-case text-3xl font-extrabold text-blue-600 pl-6 mt-4'>Brain
+                <p className='normal-case text-center text-3xl font-extrabold text-blue-600 pl-6 mt-4'>Brain
                     <br />
                     Booster
                     <br />
