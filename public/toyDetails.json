@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "category": "Young Scientist",
+        "toy_name": "Rainbow reactions pre-school science lab",
+        "photo": "https://www.learningresources.com/media/catalog/product/2/8/2894_rainbowscience_hero_sh-1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "20.00",
+        "ratings": 4.8
+    },    
+    {
+        "id": 2,
+        "category": "Young Scientist",
+        "toy_name": "Primary science deluxe lab set",
+        "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler0826_main.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "30.00",
+        "ratings": 4.5
+    },    
+    {
+        "id": 3,
+        "category": "Young Scientist",
+        "toy_name": "Anatomy model-heart",
+        "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler3334_main_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "30.00",
+        "ratings": 4.5
+    },    
+    {
+        "id": 4,
+        "category": "Fine Motor Skills",
+        "toy_name": "Rainbow reactions pre-school science lab",
+        "photo": "https://www.learningresources.com/media/catalog/product/2/8/2894_rainbowscience_hero_sh-1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "50.00",
+        "ratings": 4.7
+    },    
+    {
+        "id": 4,
+        "category": "Fine Motor Skills",
+        "toy_name": "Primary science deluxe lab set",
+        "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler0826_main.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "25.00",
+        "ratings": 4.5
+    },    
+    {
+        "id": 6,
+        "category": "Fine Motor Skills",
+        "toy_name": "Anatomy model-heart",
+        "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler3334_main_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend quam non felis lacinia, a tempor sapien congue. Sed ac risus massa. Etiam nisl metus, ultrices ac sapien quis, posuere hendrerit magna. Phasellus ultricies mattis egestas. Quisque egestas vulputate maximus. Integer bibendum nibh nibh, eget rhoncus mi euismod vitae. Etiam sollicitudin ut est vitae elementum. ",
+        "price": "45.00",
+        "ratings": 4.5
+    }   
+   
+]
