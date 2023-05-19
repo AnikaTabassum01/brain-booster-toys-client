@@ -1,12 +1,63 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const { googleLoginUser, loginInUser, loading, setLoading, setUser } = useContext(AuthContext);
+    const [error, setError] = useState('')
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        setError('')
+        if (password.length < 6) {
+            setError('Password must be 6 characters long')
+            return;
+        }
+        loginInUser(email, password)
+            .then(result => {
+                const user = result.user;
+                setLoading(false)
+                form.reset();
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                if (errorMessage == 'Firebase: Error (auth/user-not-found).') {
+                    setLoading(false)
+                    setError('You have no account. Please Sign Up')
+                } else if (errorMessage == 'Firebase: Error (auth/wrong-password).') {
+                    setLoading(false)
+                    setError('Wrong password')
+                }
+                console.log(errorMessage)
+            })
+    }
+    const handleGoogleLogin = () =>{
+        googleLoginUser()
+        .then(result =>{
+            const user = result.user;
+            setLoading(false)
+            setUser(user)
+        })
+        .catch(error =>{
+            const errorMessage = error.message;
+        })
+    }
+
     return (
-        <div className="hero min-h-screen">
-       
+        <>
+             {
+                loading 
+                
+                }
+
+                    <div className="hero min-h-screen">       
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <div className="card-body">
+                <form onSubmit={handleSubmit} className="card-body">
                     <h1 className="text-3xl font-bold text-center pb-8">Login...!</h1>
                     <form>
                         <div className="form-control">
@@ -32,13 +83,15 @@ const Login = () => {
                             <div className="divider text-slate-400">OR</div>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="normal-case btn hover:bg-transparent bg-transparent hover:text-black text-black flex items-center justify-center"> Login with Google</button>
+                            <button onClick={handleGoogleLogin} className="normal-case btn hover:bg-transparent bg-transparent hover:text-black text-black flex items-center justify-center"> Login with Google</button>
                         </div>
+                        <p className='text-orange-500'>{error}</p>
                     </form>
                     <p className='my-4 text-center'>New to Brain Booster Toys? <Link className='text-blue-500 font-bold' to='/signup'>Sign Up</Link></p>
-                </div>
+                </form>
             </div>
         </div>
+        </>
     
     );
 };

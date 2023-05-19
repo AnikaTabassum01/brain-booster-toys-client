@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider/AuthProvider';
+import { HiUserCircle } from "react-icons/hi";
 
 const Navbar = () => {
-
+    const { user, signOutUser, setLoading } = useContext(AuthContext)
+    console.log(user);
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                setLoading(false)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
 
     return (
         <div className="navbar bg-slate-300 h-32 pb-8">
@@ -14,8 +26,12 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <Link to='/'>Home</Link>
                         <Link to='/alltoy'>All Toy</Link>
-                        <Link to='/mytoy'>My Toy</Link>
-                        <Link to='/addatoy'>Add a Toy</Link>
+                        {
+                            user && <>
+                                <Link to='/mytoy'>My Toy</Link>
+                                <Link to='/addatoy'>Add a Toy</Link>
+                            </>
+                        }
                         <Link to='/blog'>Blog</Link>
                     </ul>
                 </div>
@@ -29,14 +45,29 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 text-blue-700 gap-6 font-bold text-xl mt-4">
                     <Link to='/'>Home</Link>
                     <Link to='/alltoy'>All Toy</Link>
-                    <Link to='/mytoy'>My Toy</Link>
-                    <Link to='/addatoy'>Add a Toy</Link>
+                    {
+                        user && <>
+                            <Link to='/mytoy'>My Toy</Link>
+                            <Link to='/addatoy'>Add a Toy</Link>
+                        </>
+                    }
                     <Link to='/blog'>Blog</Link>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to='/login'><button className="btn btn-active btn-info">Log in</button></Link>
-            </div>
+
+            
+            {
+                user ? <div>
+                    <div className="tooltip hover:tooltip-open tooltip-bottom" data-tip={user.displayName ? user.displayName : 'No UserName'}>
+                        {
+                            user.photoURL ? <img className='w-8 h-8 mx-3 md:mx-5 rounded-full' src={user.photoURL} alt="" /> : <HiUserCircle className='w-8 h-8 mx-3 md:mx-5' />
+                        }
+                    </div>
+                    <button onClick={handleSignOut} className='btn font-bold rounded-md'>Sign Out</button>
+                </div> : <Link to='/login'><button className="btn btn-active btn-info normal-case">Log in</button></Link>
+            }
+            
+               
         </div>
     );
 };
