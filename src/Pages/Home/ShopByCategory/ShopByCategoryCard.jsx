@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AllToyDetailsCard = ({ toy }) => {
+const ShopByCategoryCard = ({ toy }) => {
 
     const { toy_name, photo, price, ratings, category } = toy;
 
@@ -24,4 +24,4 @@ const AllToyDetailsCard = ({ toy }) => {
     );
 };
 
-export default AllToyDetailsCard;
+export default ShopByCategoryCard ;

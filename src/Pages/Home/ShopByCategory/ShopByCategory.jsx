@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import AllToyDetailsCard from './AllToyDetailsCard';
+import ShopByCategoryCard from './ShopByCategoryCard';
 
-const AllToyDetails = () => {
+const ShopByCategory = () => {
 
         const [toys, setToy] = useState([]);
 
@@ -21,14 +21,14 @@ const AllToyDetails = () => {
 
             <div className='grid lg:grid-cols-3 gap-4 mx-12'>
             {
-              toys.map(toy => <AllToyDetailsCard
+              toys.map(toy => <ShopByCategoryCard 
               key={toy.id}
               toy={toy}
-              ></AllToyDetailsCard> ) 
+              ></ShopByCategoryCard> ) 
             }
             </div>
         </div>
     );
 };
 
-export default AllToyDetails;
+export default ShopByCategory;
