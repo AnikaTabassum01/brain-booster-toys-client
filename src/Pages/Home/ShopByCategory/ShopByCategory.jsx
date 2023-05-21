@@ -6,7 +6,7 @@ const ShopByCategory = () => {
     const [toys, setToy] = useState([]);
 
     useEffect(() => {
-        fetch('toyDetails.json')
+        fetch('https://brain-booster-toy-server-anikatabassum01.vercel.app/categoryToy')
             .then(res => res.json())
             .then(data => setToy(data));
     }, [])
