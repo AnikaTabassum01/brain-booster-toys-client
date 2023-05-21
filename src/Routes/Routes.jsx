@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         {
           path: 'alltoy',
           element: <AllToys></AllToys>,
-          loader: () => fetch('http://localhost:5000/allToy') 
+          loader: () => fetch('https://brain-booster-toy-server-anikatabassum01.vercel.app/allToy') 
         },
         {
           path : 'categoryToyDetails/:id',

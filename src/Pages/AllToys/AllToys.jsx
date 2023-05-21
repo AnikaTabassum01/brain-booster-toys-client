@@ -46,7 +46,7 @@ const AllToys = () => {
                                     <td>{toyData?.toyName}</td>
                                    
                                     <td>$ {toyData?.price}</td>
-                                    <td>{toyData?.quantity} Pice</td>
+                                    <td>{toyData?.quantity} Pcs</td>
                                     <td>
                                        
                                             <button className="btn">view details</button>

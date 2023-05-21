@@ -25,7 +25,7 @@ const AddToy = () => {
         const toyInfo = { photo, toyName, sellerName, email, price, ratings, quantity, description }
 
         // send data to the server
-        fetch('http://localhost:5000/allToy', {
+        fetch('https://brain-booster-toy-server-anikatabassum01.vercel.app/allToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

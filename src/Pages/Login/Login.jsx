@@ -27,7 +27,7 @@ const Login = () => {
         }
         loginUser(email, password)
             .then(result => {
-                const loggedUser = result.user;
+                const user = result.user;
                 setSuccess('Your Login successful')
                 setLoading(false)
                 navigate(from, { replace: true })
@@ -48,9 +48,8 @@ const Login = () => {
     const handleGoogleLogin = () =>{
         googleLoginUser()
         .then(result =>{
-            const loggedUser = result.user;
-            setLoading(false)
-            setUser(loggedUser)
+            const user = result.user;
+            setUser(user)
             navigate(from, { replace: true })
         })
         .catch(error =>{

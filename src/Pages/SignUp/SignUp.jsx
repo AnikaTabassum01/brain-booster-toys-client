@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 import useTitle from '../../Hook/UseTitle';
 
@@ -10,7 +10,7 @@ const SignUp = () => {
     const { createUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('');
-    const from = location.state?.from?.pathname || '/'
+    
 
 
     const handleSubmit = event => {
