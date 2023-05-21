@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import {  useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hook/UseTitle';
 
 const AllToys = () => {
+
+    useTitle('All Toy')
 
     const toysData = useLoaderData();
 

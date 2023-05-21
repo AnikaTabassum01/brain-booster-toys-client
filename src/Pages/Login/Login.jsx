@@ -1,8 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
+import useTitle from '../../Hook/UseTitle';
 
 const Login = () => {
+
+    useTitle('Log in')
 
     const { googleLoginUser, loginUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
