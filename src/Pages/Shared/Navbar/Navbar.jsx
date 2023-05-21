@@ -66,7 +66,7 @@ const Navbar = () => {
                 user ? <div>
                     <div className="tooltip hover:tooltip-open tooltip-bottom" data-tip={user.displayName ? user ?.displayName : 'No UserName'}>
                         {
-                            user.photoURL ? <img className='w-8 h-8 mx-3 md:mx-5 rounded-full' src={user.photoURL} alt="" /> : <HiUserCircle className='w-8 h-8 mx-3 md:mx-5' />
+                            user.photoURL ? <img className='w-8 h-8 mx-3 md:mx-5 rounded-full' src={user.photoURL} alt="" /> : <HiUserCircle className='w-8 h-8 mx-3 md:mx-5 text-yellow-200' />
                         }
                     </div>
                     <button onClick={handleSignOut} className='btn btn-outline btn-warning text-xl normal-case'>Sign Out</button>
