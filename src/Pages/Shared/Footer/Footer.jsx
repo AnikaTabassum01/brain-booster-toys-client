@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-blue-950 text-base-content">
 
             <div>
-                <p className='normal-case text-center text-3xl font-extrabold text-blue-600 pl-6 mt-4'>Brain
+                <p className='normal-case text-center text-3xl font-extrabold text-white pl-6 mt-4'>Brain
                     <br />
                     Booster
                     <br />
                     Toys</p>
             </div>
-            <div>
+            <div className='text-white'>
                 <span className="footer-title">About us</span>
                 <a className="link link-hover">Who We Are</a>
                 <a className="link link-hover">Join Our Team</a>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <a className="link link-hover">Affiliate Program</a>
                 <a className="link link-hover">Terms & Conditions</a>
             </div>
-            <div>
+            <div className='text-white'>
                 <span className="footer-title">Shop</span>
                 <a className="link link-hover">New Products</a>
                 <a className="link link-hover">Critical Thinking</a>
@@ -27,7 +27,7 @@ const Footer = () => {
                 <a className="link link-hover">Imaginative & Role Play</a>
                 <a className="link link-hover">Teacher Resources</a>
             </div>
-            <div>
+            <div className='text-white'>
                 <span className="footer-title">Need Help?</span>
                 <a className="link link-hover">Customer Service</a>
                 <a className="link link-hover">Replacement Parts</a>

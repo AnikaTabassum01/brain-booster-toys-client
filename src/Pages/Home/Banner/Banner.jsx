@@ -23,7 +23,7 @@ const Banner = () => {
 
                 <div className="absolute flex items-center rounded-xl h-full left-0 top-0 space-y-7 pl-12  bg-gradient-to-r from-[#0d0741] to-[rgba(21, 21, 21, 0)] ">                 
                         
-                        <p className='text-amber-300 font-bold text-3xl mt-40'>As the end of school approaches,
+                        <p className='text-amber-400 font-bold text-3xl mt-40'>As the end of school approaches,
                         <br />
                          get ready to learn and play with our 
                          <br />

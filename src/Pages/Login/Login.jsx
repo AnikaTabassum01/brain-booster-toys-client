@@ -24,7 +24,7 @@ const Login = () => {
         if (password.length < 6) {
             setError('Password must be at least 6 characters long')
             return;
-        }
+        } else {
         loginUser(email, password)
             .then(result => {
                 const user = result.user;
@@ -45,6 +45,8 @@ const Login = () => {
                 console.log(errorMessage)
             })
     }
+
+}
     const handleGoogleLogin = () =>{
         googleLoginUser()
         .then(result =>{
