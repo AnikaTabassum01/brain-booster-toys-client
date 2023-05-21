@@ -3,6 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
+
             <div>
                 <p className='normal-case text-center text-3xl font-extrabold text-blue-600 pl-6 mt-4'>Brain
                     <br />
@@ -11,26 +12,31 @@ const Footer = () => {
                     Toys</p>
             </div>
             <div>
-                <span className="footer-title">Services</span>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <span className="footer-title">About us</span>
+                <a className="link link-hover">Who We Are</a>
+                <a className="link link-hover">Join Our Team</a>
+                <a className="link link-hover">Privacy Policy</a>
+                <a className="link link-hover">Affiliate Program</a>
+                <a className="link link-hover">Terms & Conditions</a>
             </div>
             <div>
-                <span className="footer-title">Company</span>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
+                <span className="footer-title">Shop</span>
+                <a className="link link-hover">New Products</a>
+                <a className="link link-hover">Critical Thinking</a>
                 <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
+                <a className="link link-hover">Imaginative & Role Play</a>
+                <a className="link link-hover">Teacher Resources</a>
             </div>
             <div>
-                <span className="footer-title">Legal</span>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
+                <span className="footer-title">Need Help?</span>
+                <a className="link link-hover">Customer Service</a>
+                <a className="link link-hover">Replacement Parts</a>
+                <a className="link link-hover">Find a Store</a>
+                <p>+880-1700000011</p>
+                <a className="link link-hover">Mon-Fri 8:30am - 5.30pm</a>
             </div>
         </footer>
+        
     );
 };
 

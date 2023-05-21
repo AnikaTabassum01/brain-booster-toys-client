@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
     const { createUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('')
+    const [success, setSuccess] = useState('');
+    const from = location.state?.from?.pathname || '/'
 
 
     const handleSubmit = event => {
@@ -18,15 +20,16 @@ const SignUp = () => {
 
         setError('')
         if (password.length < 6) {
-            setError('Password must be 6 characters')
+            setError('Password must be 6 characters long')
             return;
         }
         createUser(email, password)
             .then(result => {
-                const user = result.user;
-                user.displayName = name;
-                user.photoURL = photo;
-                setUser(user)
+                const createdUser = result.user;
+                createdUser.displayName = name;
+                createdUser.photoURL = photo;
+                setUser(createdUser)
+                setSuccess('Sign-up successful')
                 setLoading(false)
                 form.reset();
             })
@@ -80,8 +83,10 @@ const SignUp = () => {
                             <input type="text" name='password' placeholder="Password" className="input input-bordered" />
                         </div>
                         <p className='text-orange-600'>{error}</p>
+                        <p className='text-green-600'>{success}</p>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary normal-case" type="submit" value="Sign Up" />
+                           
+                            <button className="btn btn-primary normal-case">Sign up</button>
                         </div>
                     </form>
                     <p className='my-4 text-center'>Already Have an Account? <Link className='text-blue-600 font-bold' to='/login'>Log In</Link></p>

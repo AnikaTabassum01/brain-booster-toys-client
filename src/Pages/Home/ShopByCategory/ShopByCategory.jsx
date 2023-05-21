@@ -3,29 +3,33 @@ import ShopByCategoryCard from './ShopByCategoryCard';
 
 const ShopByCategory = () => {
 
-        const [toys, setToy] = useState([]);
+    const [toys, setToy] = useState([]);
 
-        useEffect( () => {
-            fetch('toyDetails.json')
-                .then(res => res.json())
-                .then(data => setToy(data));
-        }, [])
+    useEffect(() => {
+        fetch('toyDetails.json')
+            .then(res => res.json())
+            .then(data => setToy(data));
+    }, [])
 
     return (
         <div>
-            <div>
-            <h2 className='text-5xl font-bold text-orange-700 text-center
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <h2 className='text-5xl font-bold text-orange-700 text-center
             py-8'>All Brain Booster Toys...</h2>
-        </div>
-        <p>toys: {toys.length}</p>
+            </div>
 
+            <div className="tabs font-bold mx-96 pl-4 pt-6">
+                <a className="tab tab-lg tab-lifted">Science Kits</a>
+                <a className="tab tab-lg tab-lifted tab-active">Motor Skills</a>
+                <a className="tab tab-lg tab-lifted">Math Learning</a>
+            </div>
             <div className='grid lg:grid-cols-3 gap-4 mx-12'>
-            {
-              toys.map(toy => <ShopByCategoryCard 
-              key={toy.id}
-              toy={toy}
-              ></ShopByCategoryCard> ) 
-            }
+                {
+                    toys.map(toy => <ShopByCategoryCard
+                        key={toy.id}
+                        toy={toy}
+                    ></ShopByCategoryCard>)
+                }
             </div>
         </div>
     );

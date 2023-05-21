@@ -1,13 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import Swal from 'sweetalert2';
-
-
 
 const AddToy = () => {
 
     const { user } = useContext(AuthContext)
-    // const [selectedOption, setSelectedOption] = useState(null);
+      
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -38,7 +36,7 @@ const AddToy = () => {
                         icon: 'success',
                         title: 'Yes...',
                         text: 'Toy added successfully',
-                      })
+                    })
                 }
                 console.log(data)
             })
@@ -46,8 +44,6 @@ const AddToy = () => {
     }
     return (
         <div>
-            <h2>Add A Toy</h2>
-
             <form onSubmit={handleSubmit} className='p-10 my-5 w-4/6 mx-auto border-2 shadow-2xl'>
                 <p className='mb-7 text-3xl font-bold text-center'>
                     Add A Toy
@@ -76,9 +72,10 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Seller Email</span>
                         </label>
-                        <input type="email" defaultValue='email' placeholder='Input Seller Email' name="email" className="input input-bordered focus:outline-none" />
+                        <input type="email" defaultValue={user?.email} placeholder='Input Seller Email' name="email" className="input input-bordered focus:outline-none" />
                     </div>
-                    
+                   
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Price</span>

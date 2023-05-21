@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 
 const Login = () => {
 
-    const { googleLoginUser, loginInUser, loading, setLoading, setUser } = useContext(AuthContext);
+    const { googleLoginUser, loginUser, loading, setLoading, setUser } = useContext(AuthContext);
+    const [success, setSuccess] = useState('');
     const [error, setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -15,23 +19,25 @@ const Login = () => {
 
         setError('')
         if (password.length < 6) {
-            setError('Password must be 6 characters long')
+            setError('Password must be at least 6 characters long')
             return;
         }
-        loginInUser(email, password)
+        loginUser(email, password)
             .then(result => {
-                const user = result.user;
+                const loggedUser = result.user;
+                setSuccess('Your Login successful')
                 setLoading(false)
+                navigate(from, { replace: true })
                 form.reset();
             })
             .catch(error => {
                 const errorMessage = error.message;
                 if (errorMessage == 'Firebase: Error (auth/user-not-found).') {
                     setLoading(false)
-                    setError('You have no account. Please Sign Up')
+                    setError('You do not have any account. Please Sign Up')
                 } else if (errorMessage == 'Firebase: Error (auth/wrong-password).') {
                     setLoading(false)
-                    setError('Wrong password')
+                    setError('You have entered wrong password')
                 }
                 console.log(errorMessage)
             })
@@ -39,12 +45,14 @@ const Login = () => {
     const handleGoogleLogin = () =>{
         googleLoginUser()
         .then(result =>{
-            const user = result.user;
+            const loggedUser = result.user;
             setLoading(false)
-            setUser(user)
+            setUser(loggedUser)
+            navigate(from, { replace: true })
         })
         .catch(error =>{
             const errorMessage = error.message;
+            console.log(errorMessage)
         })
     }
 
@@ -76,10 +84,10 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary normal-case" type="submit" value="Login" />
+                            <button className="btn btn-primary normal-case">Log in</button>
                         </div>
 
-                        <div className="flex flex-col w-full border-opacity-50">
+                        <div className="flex flex-col w-full border-opacity-100">
                             <div className="divider text-slate-400">OR</div>
                         </div>
                         <div className="form-control mt-6">

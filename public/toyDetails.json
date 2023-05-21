@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "category": "Young Scientist",
+        "category": "Science_Kits",
         "toy_name": "Rainbow reactions pre-school science lab",
         "photo": "https://www.learningresources.com/media/catalog/product/2/8/2894_rainbowscience_hero_sh-1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 
@@ -11,7 +11,7 @@
     },    
     {
         "id": 2,
-        "category": "Young Scientist",
+        "category": "Science_Kits",
         "toy_name": "Primary science deluxe lab set",
         "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler0826_main.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 
@@ -21,7 +21,7 @@
     },    
     {
         "id": 3,
-        "category": "Young Scientist",
+        "category": "Science_Kits",
         "toy_name": "Anatomy model-heart",
         "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler3334_main_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 
@@ -31,7 +31,7 @@
     },    
     {
         "id": 4,
-        "category": "Fine Motor Skills",
+        "category": "Fine_Motor_Skills",
         "toy_name": "Rainbow reactions pre-school science lab",
         "photo": "https://www.learningresources.com/media/catalog/product/2/8/2894_rainbowscience_hero_sh-1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 
@@ -41,7 +41,7 @@
     },    
     {
         "id": 4,
-        "category": "Fine Motor Skills",
+        "category": "Fine_Motor_Skills",
         "toy_name": "Primary science deluxe lab set",
         "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler0826_main.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 
@@ -51,7 +51,7 @@
     },    
     {
         "id": 6,
-        "category": "Fine Motor Skills",
+        "category": "Fine_Motor_Skills",
         "toy_name": "Anatomy model-heart",
         "photo": "https://www.learningresources.com/media/catalog/product/l/e/ler3334_main_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=176&width=176&canvas=176:176",
 

@@ -27,10 +27,12 @@ const Navbar = () => {
                         <Link to='/'>Home</Link>
                         <Link to='/alltoy'>All Toy</Link>
                         {
-                            user && <>
+                            user ? <>
                                 <Link to='/mytoy'>My Toy</Link>
                                 <Link to='/addatoy'>Add a Toy</Link>
                             </>
+                                :
+                                <Link to="/login"></Link>
                         }
                         <Link to='/blog'>Blog</Link>
                     </ul>
@@ -45,17 +47,21 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 text-blue-700 gap-6 font-bold text-xl mt-4">
                     <Link to='/'>Home</Link>
                     <Link to='/alltoy'>All Toy</Link>
+
                     {
-                        user && <>
+                        user ? <>
                             <Link to='/mytoy'>My Toy</Link>
                             <Link to='/addatoy'>Add a Toy</Link>
                         </>
+                            :
+                            <Link to="/login"></Link>
                     }
+
                     <Link to='/blog'>Blog</Link>
                 </ul>
             </div>
 
-            
+
             {
                 user ? <div>
                     <div className="tooltip hover:tooltip-open tooltip-bottom" data-tip={user.displayName ? user.displayName : 'No UserName'}>
@@ -66,10 +72,14 @@ const Navbar = () => {
                     <button onClick={handleSignOut} className='btn font-bold rounded-md'>Sign Out</button>
                 </div> : <Link to='/login'><button className="btn btn-active btn-info normal-case">Log in</button></Link>
             }
-            
-               
+
+
         </div>
     );
 };
 
 export default Navbar;
+
+//
+// <Link to='/blog'>Blog</Link>
+
